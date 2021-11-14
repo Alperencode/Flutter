@@ -121,11 +121,10 @@ void main(){
   void instantGreeting(){
       print("Hi!!");
   }
-
   print(Greeting("Alperen"));
   instantGreeting(); 
-  print("------------------------------");
 
+  print("------------------------------");
   // Map (Python Dict)
   print("\nMap Section\n");
   Map<String, int> map1 = new Map<String, int>();
@@ -138,5 +137,17 @@ void main(){
   hero.addAll({"Wife":"Pepper Potts"});
   hero.keys.forEach((specials) {print("Keys: ${specials}");}); 
   hero.values.forEach((values) {print("Values: ${values}");}); 
-  
+
+  print("------------------------------");
+  // Using Unicodes
+  print("56 unicode's char: \u{56}");                                               // \u to use unicodes
+  String uniExample = "Hello World!";                           // code.Units to see string's unicodes for each char
+  print("Unicodes unicode: ${uniExample.codeUnits}");
+
+  print("------------------------------");
+  // TypeDef
+  // Do research about usage
+
+  print("------------------------------");
+  // 
 }
