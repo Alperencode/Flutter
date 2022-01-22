@@ -96,6 +96,7 @@ void main(){
   List<String> l2 = ["Apple","Banana","Lemon"];      // Defining and creating list
   var l3 = [];                                      // Creating a dynamic list
   var sentence = l2.join(" ");                     // Turning list into string
+  l2.add("Watermelon");
   for(var i in l2){
     print(i);
   }
@@ -103,12 +104,18 @@ void main(){
    
   var l4 = [12,21,2,3,4,124,12];
   for(var i = 0; i < l4.length; i++){
-      print(l4[i]);
+      // print(l4[i]);
   }
 
   print("------------------------------");
   // Functions
   print("\nFunction Section");
+  printSomething(x){
+    print(x);
+  }
+
+  printSomething("Efe");
+  
   int SumNumbers(x,y){
       return x+y;
   }
@@ -122,6 +129,7 @@ void main(){
       print("Hi!!");
   }
   print(Greeting("Alperen"));
+  
   instantGreeting(); 
 
   print("------------------------------");
@@ -145,9 +153,5 @@ void main(){
   print("Unicodes unicode: ${uniExample.codeUnits}");
 
   print("------------------------------");
-  // TypeDef
-  // Do research about usage
 
-  print("------------------------------");
-  // 
 }
