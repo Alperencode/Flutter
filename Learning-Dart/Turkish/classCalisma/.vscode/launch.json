@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "classCalisma/Insan.dart"
+            "program": "Insan.dart"
         }
     ]
 }
