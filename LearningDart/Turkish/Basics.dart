@@ -118,7 +118,7 @@ main() {
   // Örneğin String veri tipine özel toUpperCase() fonksiyonu metnin içindeki bütün harfleri büyük harfe çeviriyor
   // ama dynamic tipinde bir metnimiz varsa bu fonksiyonu kullanamıyoruz  
   String helloWorld = "Hello World";
-  helloWorld = helloWorld.toUpperCase(); 
+  helloWorld = helloWorld.toUpperCase();
   print(helloWorld);
 
   // 11) Değişken dönüşümleri
@@ -151,5 +151,56 @@ main() {
   // Yaparsak hata vericek işlemler (Çünkü sonradan değiştirilemiyor)
   // m2 += 5;
   // m1 = "Serhat";
+
+  // 13) Listeler
+  // Notlar:
+  // List'den sonra <> içinde veri tipini belirtiyoruz
+  // sonra listenin ismini giriyoruz
+  // [] içine de elemanları giriyoruz
+  // Liste uzunluğunu otomatik yakalıyor bizim belirtmemize gerek yok
+  List<String> liste1 = ["Elma","Armut","Karpuz","Limon"];
+
+  // liste1.length listenin uzunluğunu veriyor
+  // indisler ile listeyi gezmek istersek kullanıyoruz
+  for (int i = 0; i < liste1.length; i++){
+
+    print(liste1[i]);
+
+  }
+
+  // 14) 'for in' kullanımı
+  // Notlar:
+  // for'dan sonra listenin içini gezicek değişkenin veri tipini belirtiyoruz
+  // Aşağıda otomatik yakalaması için var olarak belirledik
+  // Listeyi gezicek değişkenin ismi ve 'in liste1' gibi geziceği listeyi belirtiyoruz   
+
+  // Bundan sonra i bizim için listenin içindeki değer oluyor
+  // İlk döndüğünde 'Elma' ikinci döndüğünde 'Armut' gibi
+  for(var i in liste1){
+
+    print(i);
+
+  }
+  
+  // 15) Metinleri belirli bir kritere göre ayırıp liste haline getirme
+  // Notlar:
+  // Bir metni .split() ile içine verdiğimiz değere göre ayırıp her ayrılan değeri 
+  // Listeye bir eleman olarak ekliyor
+
+  // "Hello World Alperen".split(" ") boşluk'a göre elemanlara ayırıp
+  // liste2'ye eleman olarak atıyor
+  List<String> liste2 = "Hello World Alperen".split(" ");
+  print(liste2);
+
+  for(var i in liste2 ){
+    print(i);
+  }
+
+  // 16) foreach ile liste gezimi
+  // Notlar:
+  // liste1'e fonksiyon olarak çağırıyoruz
+  // parantez içinde listede gezicek değişkeni veriyoruz
+  // süslü parantez içinde de listeyi her döndüğünde yapılıcak işlemi giriyoruz
+  liste1.forEach( (element) {print(element);});
 
 }
