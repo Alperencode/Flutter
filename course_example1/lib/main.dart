@@ -3,6 +3,9 @@
 
 import 'package:flutter/material.dart';
 
+import './answers.dart';
+import './questions.dart';
+
 void main() {
   // runApp is a function provided by material.dart
   // It's calling the build method from the class
@@ -10,21 +13,24 @@ void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget{
-
+class MyApp extends StatefulWidget {
   @override
-  State<StatefulWidget> createState(){
+  State<StatefulWidget> createState() {
     return MyAppState();
   }
 }
 
 class MyAppState extends State<MyApp> {
   int currentQuestion = 0;
-  
+
   void answeredQuestion() {
-    setState(() {
+    if(currentQuestion<2){
+      
+      setState(() {
       currentQuestion++;
-    });
+      });
+      
+    }
     print(currentQuestion);
   }
 
@@ -35,30 +41,20 @@ class MyAppState extends State<MyApp> {
     var questions = [
       "What's your favourite colour?",
       "What's your favourite pet?",
-      "Which on do you use more?"
+      "Which platform do you use more?"
     ];
-    
-    return MaterialApp(
 
+    return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             title: const Text("First-Example"),
           ),
           body: Column(
             children: [
-              Text(questions[currentQuestion]),
-              ElevatedButton(
-                child: Text("Answer 1"),
-                onPressed: answeredQuestion,
-              ),
-              ElevatedButton(
-                child: Text("Answer 2"),
-                onPressed: answeredQuestion,
-              ),
-              ElevatedButton(
-                child: Text("Answer 3"),
-                onPressed: answeredQuestion,
-              ),
+              Question(questions[currentQuestion]),
+              Answers(answeredQuestion),
+              Answers(answeredQuestion),
+              Answers(answeredQuestion)
             ],
           )),
     );
