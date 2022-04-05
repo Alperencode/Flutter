@@ -24,13 +24,13 @@ class MyAppState extends State<MyApp> {
   int currentQuestion = 0;
 
   void answeredQuestion() {
-    if(currentQuestion<2){
-      
-      setState(() {
-      currentQuestion++;
-      });
-      
+    // I added this check to prevent the crash
+    if (currentQuestion == 2) {
+      currentQuestion = -1;
     }
+    setState(() {
+        currentQuestion++;
+    });
     print(currentQuestion);
   }
 
@@ -39,30 +39,33 @@ class MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     // MaterialApp returns a widget (as it should right here)
     var questions = [
-      "What's your favourite colour?",
-      "What's your favourite pet?",
-      "Which platform do you use more?"
+      {
+        'questionText': 'What\'s your favourite colour?',
+        'answers': ["Black", "White", "Brown", "Yellow"]
+      },
+      {
+        'questionText': 'What\'s your favourite pet?',
+        'answers': ["Cat", "Dog", "Rabbit"]
+      },
+      {
+        'questionText': 'Which platform do you use more?',
+        'answers': ["Instagram", "Facebook", "Tiktok", "Twitch", "Youtube"]
+      }
     ];
 
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
-            title: const Text("First-Example"),
+            title: const Text("Course-Example"),
           ),
           body: Column(
             children: [
-              Question(questions[currentQuestion]),
-              Answers(answeredQuestion),
-              Answers(answeredQuestion),
-              Answers(answeredQuestion)
+              Question(questions[currentQuestion]['questionText'] as String),
+              ...(questions[currentQuestion]['answers'] as List<String>).map((answer) {
+                return Answers(answeredQuestion, answer);
+              }).toList()
             ],
           )),
     );
-  }
-
-  @override
-  Element createElement() {
-    // TODO: implement createElement
-    throw UnimplementedError();
   }
 }
