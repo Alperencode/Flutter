@@ -3,8 +3,8 @@
 
 import 'package:flutter/material.dart';
 
-import './answers.dart';
-import './questions.dart';
+import './quiz.dart';
+import './result.dart';
 
 void main() {
   // runApp is a function provided by material.dart
@@ -22,50 +22,67 @@ class MyApp extends StatefulWidget {
 
 class MyAppState extends State<MyApp> {
   int currentQuestion = 0;
+  int totalScore = 0;
 
-  void answeredQuestion() {
-    // I added this check to prevent the crash
-    if (currentQuestion == 2) {
-      currentQuestion = -1;
-    }
+  void resetQuiz() {
     setState(() {
-        currentQuestion++;
+      currentQuestion = 0;
+      totalScore = 0;
     });
-    print(currentQuestion);
   }
+
+  void answeredQuestion(int score) {
+    totalScore += score;
+
+    setState(() {
+      currentQuestion++;
+    });
+    // print(currentQuestion);
+  }
+
+  static const questions = [
+    {
+      'questionText': 'What\'s your favourite colour?',
+      'answers': [
+        {'text': "Black", 'score': 10},
+        {'text': "Brown", 'score': 8},
+        {'text': "Orange", 'score': 5},
+        {'text': "Yellow", 'score': 3},
+        {'text': "White", 'score': 0},
+      ]
+    },
+    {
+      'questionText': 'What\'s your favourite pet?',
+      'answers': [
+        {'text': "Dog", 'score': 5},
+        {'text': "Cat", 'score': 3},
+        {'text': "Rabbit", 'score': 0},
+      ]
+    },
+    {
+      'questionText': 'Which platform do you use more?',
+      'answers': [
+        {'text': "Tiktok", 'score': 10},
+        {'text': "Twitch", 'score': 8},
+        {'text': "Instagram", 'score': 5},
+        {'text': "Facebook", 'score': 3},
+        {'text': "Youtube", 'score': 0},
+      ]
+    }
+  ];
 
   // indicating the overriding the extending class
   @override
   Widget build(BuildContext context) {
     // MaterialApp returns a widget (as it should right here)
-    var questions = [
-      {
-        'questionText': 'What\'s your favourite colour?',
-        'answers': ["Black", "White", "Brown", "Yellow"]
-      },
-      {
-        'questionText': 'What\'s your favourite pet?',
-        'answers': ["Cat", "Dog", "Rabbit"]
-      },
-      {
-        'questionText': 'Which platform do you use more?',
-        'answers': ["Instagram", "Facebook", "Tiktok", "Twitch", "Youtube"]
-      }
-    ];
-
     return MaterialApp(
       home: Scaffold(
           appBar: AppBar(
             title: const Text("Course-Example"),
           ),
-          body: Column(
-            children: [
-              Question(questions[currentQuestion]['questionText'] as String),
-              ...(questions[currentQuestion]['answers'] as List<String>).map((answer) {
-                return Answers(answeredQuestion, answer);
-              }).toList()
-            ],
-          )),
+          body: currentQuestion < questions.length
+              ? Quiz(answeredQuestion, questions, currentQuestion)
+              : Result(totalScore, resetQuiz)),
     );
   }
 }
