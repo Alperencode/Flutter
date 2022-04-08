@@ -1,16 +1,14 @@
-# example_2
+# My First Example
 
-A new Flutter project.
+I made a basic Personality Test app to practice myself.
 
-## Getting Started
+## Screenshots
 
-This project is a starting point for a Flutter application.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
+<img src="images/img1.PNG">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<br>
+<br>
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="images/img2.PNG">
