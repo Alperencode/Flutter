@@ -1,5 +1,8 @@
-// Didn't start yet its just initializing
+// Add random word generator feature
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:english_words/english_words.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,6 +12,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final style = const TextStyle(
+    fontSize: 25,
+    fontWeight: FontWeight.bold,
+  );
+  final randomWord = WordPair.random();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -18,8 +27,9 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Container(
           alignment: Alignment.center,
-          child: const Text(
-            "Name Generator App",
+          child: Text(
+            randomWord.asPascalCase,
+            style: style,
           ),
         ),
       ),
