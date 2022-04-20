@@ -1,1 +1,4 @@
 *.html linguist-language= Dart
+*.cpp  linguist-language= Dart
+*.cmake  linguist-language= Dart
+*.txt  linguist-language= Dart
