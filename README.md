@@ -1,15 +1,21 @@
 <h1>Flutter</h1>
+
 <p>
 
-In this repository I'll push my all flutter projects. Firstly I'll learn dart then make basics apps. Then start to make more apps and add them here.
+In this repository, I'll push my Flutter apps and projects. Firstly I'll learn the Dart language (✔) and then make basic implementations. Afterwards, I'll start to make more advanced and complex projects.
+
 </p>
-<br/>
+<br>
 
 <h2>Repository Roadmap</h2>
+
 <p>
-#1 Learning dart <br>
-#2 Making basic apps like calculator, to do list and more <br>
-#3 Developing my own and stable app <br>
-#4 Trying to develop more and different type of apps  
+  
+- Learning Dart ✔
+- Making basic apps like: to do list, calculator and more ●
+- Developing complex project
+- Learning to use Databases (Firebase) and make more advanced projects
+  
 </p>
-<br/>
+
+<br>
