@@ -1,24 +1,38 @@
+import 'InfiniteScroll.dart';
 import 'package:flutter/material.dart';
-import './names.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatefulWidget {
-  @override
-  State<MyApp> createState() => _MyAppState();
+void main() {
+  runApp(const MyApp());
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text("Name Generator"),
-          backgroundColor: Colors.deepPurple,
-        ),
-        body: Names(),
+      title: 'Name Generator',
+      theme: ThemeData(
+        primarySwatch: Colors.lightGreen,
       ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        title: const Text(
+          'Name Generator',
+        ),
+      ),
+      body: const InfiniteScroll(),
     );
   }
 }
