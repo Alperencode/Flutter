@@ -3,7 +3,7 @@ main() {
   print("Hello World");
 
   // 1) Değişken Tipleri
-  // Notlar:
+  // Not:
   // Dart'da float değişken tipi yok
   // diğer değişken tipleri bildiğimiz değişken tipleri 
   String isim = 'Alperen';
@@ -15,18 +15,18 @@ main() {
   String? string1 = null;
   
   // 2) Print ile değişken yazdırma
-  // Notlar: 
+  // Not: 
   // print'in içine sadece değişkeni yazdırarak değişkenin içindeki değer ekrana yazdırabiliyoruz
   // ama en fazla bir değişkeni bu şekilde yazdırabiliyoruz
   print(isim);
 
   // 3) String içinde değişken yazdırma
-  // Notlar:
+  // Not:
   // String içinde değişkenlerin başına '$' işareti koyarak değişken yazdırabiliyoruz
   print("$isim $sayi $pi $canli");
   
   // 4) Multi line string yazımı (""" """)
-  // Notlar:
+  // Not:
   // 3 Tek tırnak veya 3 Çift tırnak ile başlayan ve biten String'ler çok satırlı stringdir
   // Çok satırlı stringler tab boşluklarını ve normal boşlukları algılar 
   String cokSatirli = """ 
@@ -37,7 +37,7 @@ main() {
   print(cokSatirli);
   
   // 5) String içinde tek tırnak ve çift tırnak farkı (' ve " işareti) 
-  // Notlar:
+  // Not:
   // Tek tırnaklı String içinde çift tırnak kullanabiliyoruz
   // Çift tırnaklı String içinde de tek tırnak kullanabiliyoruz
   // Ve bu sayede String'leri bozmadan iki noktalama işaretini de kullanabiliyoruz
@@ -90,7 +90,7 @@ main() {
   }
   
   // 9) var ve dynamic değişken tipleri
-  // Notlar:
+  // Not:
   // var: değişken tiplerini kendisi otomatik olarak kendisi yakalıyor
   // ama ve değişkene o tipi atıyor
   
@@ -110,7 +110,7 @@ main() {
   isim5 = "Hello World";
 
   // 10) Neden bütün değişkenleri dynamic yapmıyoruz (veri tipine özel fonksiyonlar)
-  // Notlar:
+  // Not:
   // değişken tipini belirtmemiz gerekmiyor ve sonradan değiştirebiliyorsak neden bütün değişkenlerde dynamic kullanmıyoruz?
   // Çünkü bütün veri tiplerinin kendilerine özel fonksiyonları var
   // ve string değil de dynamic tipini kullandığımızda bu fonksiyonları kullanamıyoruz
@@ -141,7 +141,7 @@ main() {
   String sayi3String = sayi3.toString();
 
   // 12) const ve final tipi
-  // Notlar:
+  // Not:
   // const ve final tipi sonradan değiştirilemeyen veri tipidir
   // var gibi bizim için veri tipini kendisi yakalarlar
   // ikiside aynı görevi görüyor aralarında ince bir fark var ama şuanlık bilmemize gerek yok
@@ -153,7 +153,7 @@ main() {
   // m1 = "Serhat";
 
   // 13) Listeler
-  // Notlar:
+  // Not:
   // List'den sonra <> içinde veri tipini belirtiyoruz
   // sonra listenin ismini giriyoruz
   // [] içine de elemanları giriyoruz
@@ -169,7 +169,7 @@ main() {
   }
 
   // 14) 'for in' kullanımı
-  // Notlar:
+  // Not:
   // for'dan sonra listenin içini gezicek değişkenin veri tipini belirtiyoruz
   // Aşağıda otomatik yakalaması için var olarak belirledik
   // Listeyi gezicek değişkenin ismi ve 'in liste1' gibi geziceği listeyi belirtiyoruz   
@@ -183,7 +183,7 @@ main() {
   }
   
   // 15) Metinleri belirli bir kritere göre ayırıp liste haline getirme
-  // Notlar:
+  // Not:
   // Bir metni .split() ile içine verdiğimiz değere göre ayırıp her ayrılan değeri 
   // Listeye bir eleman olarak ekliyor
 
@@ -197,7 +197,7 @@ main() {
   }
 
   // 16) foreach ile liste gezimi
-  // Notlar:
+  // Not:
   // liste1'e fonksiyon olarak çağırıyoruz
   // parantez içinde listede gezicek değişkeni veriyoruz
   // süslü parantez içinde de listeyi her döndüğünde yapılıcak işlemi giriyoruz
