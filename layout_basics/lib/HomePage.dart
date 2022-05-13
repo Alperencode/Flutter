@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:layout_basics/Custom_Widgets/SignInButton.dart';
+import 'package:layout_basics/Custom_Widgets/SocialSignInButton.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -31,14 +32,16 @@ Widget MainPage() {
           textAlign: TextAlign.center,
         ),
         const SizedBox(height: 50.0),
-        SignInButton(
+        SocialSignInButton(
+          assetName: 'images/google-logo.png',
           text: "Sign in with Google",
           color: Colors.white,
           onPressed: () {},
           textColor: Colors.black,
         ),
         const SizedBox(height: 8.0),
-        SignInButton(
+        SocialSignInButton(
+          assetName: ('images/facebook-logo.png'),
           text: "Sign in with Facebook",
           color: Colors.blueAccent,
           onPressed: () {},
