@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "Basics.dart"
+            "program": "SoruCozumleri.dart"
         }
     ]
 }
