@@ -8,7 +8,7 @@
             "name": "Dart & Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "SoruCozumleri.dart"
+            "program": "OrnekSorular.dart"
         }
     ]
 }

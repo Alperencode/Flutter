@@ -43,15 +43,13 @@ void main() {
   // 4. Soru
   // cumle = "That's what she said"
   // Yukarıdaki cümlenin kelimelerini tersten yazdırın
-  String cumle = "That's what she said";
-  List<String> liste2 = cumle.split(" ");
-  
-  int uzunluk = liste2.length - 1;
-  
-  for(int i=0;i < liste2.length;i++){
-  
-    print(liste2[uzunluk - i]);
-  
+  String cumle = "That's what she said Alperen Ağa";
+  List<String> list1 = cumle.split(" ");
+
+  int uzunluk = list1.length - 1;
+
+  for(int i = uzunluk; i >= 0; i--){
+    print(list1[i]);
   }
 
 
