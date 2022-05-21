@@ -1,16 +1,13 @@
-# layout_basics
+# Layout Basics
 
-A new Flutter project.
+In this example, I practiced about how to manage the layout from basics and made a 'Sign in' page.
 
-## Getting Started
+&emsp; I used the inheritance to make the buttons code's flexible as possible
 
-This project is a starting point for a Flutter application.
+<br>
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Images of the App
+<br>
+<p align=center>
+<img src="images/layout_basics.gif" height = 400>
+</p>
